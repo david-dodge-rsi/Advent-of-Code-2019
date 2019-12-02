@@ -3,6 +3,8 @@ def convertToIntArray(inputString):
 
 programInput = open("input2.txt")
 program = convertToIntArray(programInput.read())
+program[1] = 12
+program[2] = 2
 
 for instruction in range(0, len(program)-1, 4):
     instructionSet = program[instruction : instruction + 4]
