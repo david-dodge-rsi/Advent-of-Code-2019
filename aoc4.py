@@ -28,7 +28,15 @@ def compute(memory, instuctionLength):
     return memory[0]
 
 instructionLength = 4
-memory = initializeMemory()
-result = compute(memory, instructionLength)
 
-print(result)
+for noun in range(0, 100):
+    for verb in range(0, 100):
+        memory = initializeMemory()
+        memory[1] = noun
+        memory[2] = verb
+        result = compute(memory, instructionLength)
+        if result == 19690720:
+            print("noun: " + str(noun))
+            print("verb: " + str(verb))
+            print("solution:" + str((100 * noun) + verb))
+            break
